@@ -4,9 +4,11 @@ import GroupDisplay from '../components/GroupDisplay.vue'
 import Conclusion from '../components/Conclusion.vue'
 import Remerciements  from '../components/Remerciements.vue'
 import Splash from '../components/Splash.vue'
+import Pitch from '../components/Pitch.vue'
 
 const routes = [
   { path: '/', component: Splash },
+    { path: '/pitch', component: Pitch },
   { path: '/intro', component: Intro },
   {
     path: '/groupe/:index',

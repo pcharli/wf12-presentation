@@ -1,17 +1,29 @@
 <script setup>
-import { onMounted, onBeforeUnmount } from 'vue'
+import { onMounted, onBeforeUnmount, ref } from 'vue'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
 
+const step = ref(0)
+
 function handleKey(e) {
   if (e.key === 's' || e.key === 'S') {
-    router.push('/pitch')
+    router.push('/intro')
+  }
+   if (e.key === 'n' || e.key === 'N') {
+    step.value++
+    if(step.value > 2) {
+        router.push('/intro')
+    }
   }
 }
 
 onMounted(() => {
   window.addEventListener('keydown', handleKey)
+
+  setTimeout( () => {
+    step.value++
+  },2000)
 })
 
 onBeforeUnmount(() => {
@@ -24,22 +36,27 @@ onBeforeUnmount(() => {
   <img src="@/assets/cepegra.png" alt="" class="cepegra">
     <img src="@/assets/charleroi.svg" alt="Logo" class="splash-image" />
     <h1>Parcours urbains interactifs</h1>
-    <h2 class="animate__animated animate__fadeInDown">
-      Développeurs Front-End : présentation 2025
-    </h2>
-    <div class="animated-lines">
-    <div class="cols">
-      <p class="animate__animated animate__fadeInUp animate__delay-1s">
-        Deux équipes.
-      </p>
-      <p class="animate__animated animate__fadeInUp animate__delay-2s">
-        Une mission.
-      </p>
-      <p class="animate__animated animate__fadeInUp animate__delay-3s">
-        Redécouvrir des lieux à travers le numérique.
-      </p>
-      </div>
-      </div>
+
+    <div class="bloc1" v-if="step==1">
+     <h2>Le pitch</h2>
+    <ul class="steps ">
+        <li>Des explorateurs urbains</li>
+        <li>Des parcours et des étapes</li>
+        <li>1 étape = 1 déclencheur, 1 énigme et 1 fragment</li>
+        <li>Étape finale = 1 énigme à résoudre avec les fragments</li>
+    </ul>
+    </div>
+    <transition name="fade" mode="out-in">
+    <div class="bloc2" v-if="step>1">
+    <h2>Les déclencheurs, la résolution des énigmes<br>et la restitution des fragments :</h2>
+    <ul class="steps">
+        <li>Simples textes</li>
+        <li>Photos, vidéos, sons</li>
+        <li>Géolocalisation, accéléromètre,...</li>
+        <li>AR/VR</li>
+    </ul>
+    </div>
+    </transition>
   </div>
 </template>
 
@@ -51,7 +68,6 @@ onBeforeUnmount(() => {
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   text-align: center;
 }
@@ -72,11 +88,7 @@ onBeforeUnmount(() => {
     right:150px;
     bottom:150px;
 }
-.cols {
-  display: flex;
-  justify-content: center;
-}
-.cols p {
-  margin-right: 2rem;
+.steps, h2 {
+    text-align: left;
 }
 </style>

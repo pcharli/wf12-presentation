@@ -45,29 +45,15 @@ onMounted(() => {
       alt="Une ville"
       class="charleroi-image animate__animated animate__fadeIn"
     />
-    <h1 class="animate__animated animate__fadeInDown">
-      Développeurs Front-End : présentation 2025
-    </h1>
-    <div class="animated-lines">
-    <div class="cols">
-      <p class="animate__animated animate__fadeInUp animate__delay-1s">
-        Deux équipes.
-      </p>
-      <p class="animate__animated animate__fadeInUp animate__delay-2s">
-        Une mission.
-      </p>
-      <p class="animate__animated animate__fadeInUp animate__delay-3s">
-        Redécouvrir des lieux à travers le numérique.
-      </p>
-      </div>
     
-    <div class="animate__animated animate__fadeInUp animate__delay-4s">
+    
+    <div class="animate__animated animate__fadeInUp animate__delay-1s">
       <h2>Qui commence ?</h2>
 
       <div v-if="!drawing">
         <button
           @click="startDraw"
-          class="animate__animated animate__zoomIn animate__delay-2s"
+          class="animate__animated animate__zoomIn animate__delay-3s"
           ref="buttonRef"
         >
           On tire au sort ?
@@ -80,7 +66,7 @@ onMounted(() => {
       </div>
     </div>
     </div>
-  </div>
+ 
 </template>
 
 <style scoped>
@@ -98,11 +84,5 @@ onMounted(() => {
   text-align: center;
   padding: 2rem;
 }
-.cols {
-  display: flex;
-  justify-content: center;
-}
-.cols p {
-  margin-right: 2rem;
-}
+
 </style>
