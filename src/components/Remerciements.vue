@@ -12,7 +12,9 @@
       <div class="content">
         <img src="@/assets/odoo.png" alt="Odoo">&nbsp;
         <!--<img src="@/assets/e-net.svg" alt="e-net.">-->
-        <img src="@/assets/lieu.png" alt="Etat des lieux">
+        <img src="@/assets/lieu.png" alt="Etat des lieux">&nbsp;
+        <img src="@/assets/vanksen.png" alt="Vanksen.com">&nbsp;
+        <img src="@/assets/certinergie.jfif" alt="Certinergie">
          </div>
       </li>
       <li><h2>Les stagiaires et formateurs</h2></li>
