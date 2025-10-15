@@ -7,10 +7,12 @@
     </div>
     <div class="col col2">
     <ul>
-      <li class="visitors"><h2>Nos visiteurs</h2>
+      <li class="visitors">
+      <h2>Nos visiteurs</h2>
       <div class="content">
-        <img src="@/assets/odoo.png" alt="">&nbsp;
-         <img src="@/assets/e-net.svg" alt="">
+        <img src="@/assets/odoo.png" alt="Odoo">&nbsp;
+        <!--<img src="@/assets/e-net.svg" alt="e-net.">-->
+        <img src="@/assets/lieu.png" alt="Etat des lieux">
          </div>
       </li>
       <li><h2>Les stagiaires et formateurs</h2></li>

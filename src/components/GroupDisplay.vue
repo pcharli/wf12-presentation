@@ -33,16 +33,22 @@ onMounted(() => {
 <template>
   <div class="group-display animate__animated animate__flip">
   <div class="content">
-    <h2>{{ groupName }} Application</h2>
-    <qrcode-vue :value="appUrl" :size="200" />
+    <h2>{{ groupName }} : Application</h2>
+    <div class="qr">
+      <qrcode-vue :value="appUrl" :size="200" />
+    </div>
     <p><strong>URL :</strong> {{ appUrl || 'à venir' }}</p>
-<hr>
-    <h2>{{ groupName }} CMS</h2>
-    <qrcode-vue :value="cmsUrl" :size="200" />
+    <hr>
+  <div>
+    <h2>{{ groupName }} : CMS</h2>
+    <div class="qr">
+      <qrcode-vue :value="cmsUrl" :size="200" />
+    </div>
     <p><strong>URL :</strong> {{ cmsUrl || 'à venir' }}</p>
 
     <button @click="goNext" ref="buttonRef">Suivant</button>
-    </div>
+  </div>
+  </div>
   </div>
 </template>
 
@@ -56,5 +62,11 @@ onMounted(() => {
   max-width: 50%;
   margin: auto;
   padding: 1rem;
+}
+.qr {
+  background-color: white;
+  padding: .5rem;
+  width: 200px;
+  margin: auto;
 }
 </style>

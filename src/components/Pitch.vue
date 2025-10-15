@@ -51,6 +51,7 @@ onBeforeUnmount(() => {
     <h2>Les déclencheurs, la résolution des énigmes<br>et la restitution des fragments :</h2>
     <ul class="steps">
         <li>Simples textes</li>
+        <li>Puzzles</li>
         <li>Photos, vidéos, sons</li>
         <li>Géolocalisation, accéléromètre,...</li>
         <li>AR/VR</li>

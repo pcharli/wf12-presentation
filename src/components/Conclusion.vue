@@ -1,6 +1,6 @@
 <template>
   <div class="conclusion animate__animated animate__lightSpeedInRight">
-    <h2>Bravo à toutes les équipes !</h2>
+    <h2>Bravo aux deux équipes !</h2>
     <p>Une belle démonstration de collaboration, de créativité et de passion pour le Web.</p>
     <img src="@/assets/ville2.png" alt="">
     <blockquote>

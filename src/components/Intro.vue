@@ -11,8 +11,8 @@ const buttonRef = ref(null)
 // Clés internes pour l'ordre logique
 const groupKeys = ["groupe1", "groupe2"];
 const groupLabels = {
-  groupe1: "Équipe Alpha",
-  groupe2: "Équipe Beta",
+  groupe1: "L\'agence pas de risque",
+  groupe2: "Poloma",
 };
 
 function startDraw() {
@@ -49,6 +49,7 @@ onMounted(() => {
     
     <div class="animate__animated animate__fadeInUp animate__delay-1s">
       <h2>Qui commence ?</h2>
+      <p>"{{ groupLabels.groupe1}}" ou "{{ groupLabels.groupe2 }}" ?</p>
 
       <div v-if="!drawing">
         <button
@@ -56,7 +57,7 @@ onMounted(() => {
           class="animate__animated animate__zoomIn animate__delay-3s"
           ref="buttonRef"
         >
-          On tire au sort ?
+          On tire au sort
         </button>
       </div>
 

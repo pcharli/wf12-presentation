@@ -3,13 +3,13 @@ export const order = {
   set(firstKey, secondKey) {
     const groupData = {
       groupe1: {
-        name: 'Équipe Alpha',
-        appUrl: '',
-        cmsUrl: ''
+        name: 'L\'agence pas de risque',
+        appUrl: 'https://urbex-chronicles.netlify.app/',
+        cmsUrl: 'https://tubular-stroopwafel-1c150b.netlify.app/'
       },
       groupe2: {
-        name: 'Équipe Beta',
-        appUrl: '',
+        name: 'Poloma',
+        appUrl: 'https://michonmaximilien.dev/urbex-front/',
         cmsUrl: ''
       }
     }
