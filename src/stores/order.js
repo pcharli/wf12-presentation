@@ -10,7 +10,7 @@ export const order = {
       groupe2: {
         name: 'Poloma',
         appUrl: 'https://michonmaximilien.dev/urbex-front/',
-        cmsUrl: ''
+        cmsUrl: 'https://urbex-cms-mpl.netlify.app/login'
       }
     }
 
